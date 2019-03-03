@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/yello"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:id="@+id/cart"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/cart"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/search"
+      android:layout_toLeftOf="@+id/cart"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/search"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_below="@+id/cart"
+    android:id="@+id/card_view"
+    android:orientation="horizontal">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/cart"
+       >
+
+        <android.support.v7.widget.CardView
+
+            android:layout_width="140dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:elevation="3dp"
+            android:layout_margin="5dp"
+            >
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/resname"
+            android:src="@drawable/room1"/>
+
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fav Foodie"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="welcome delisya"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="akash  kumar "
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_below="@+id/card_view"
+        android:background="@color/white">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Menu"
+
+            android:textAlignment="center" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Customer Review"
+            android:textAlignment="center" />
+
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Info"
+            android:textAlignment="center" />
+
+
+    </android.support.design.widget.TabLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/tabLayout"
+        tools:ignore="NotSibling">
+
+    </FrameLayout>
+
+</RelativeLayout>
